@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filmes - Meu Site de Filmes</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+    }
+    .navbar, .footer {
+      background-color: #1f1f1f;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border: none;
+      margin-bottom: 2rem;
+    }
+    .card-title, .card-text {
+      color: #f0f0f0;
+    }
+    a.nav-link {
+      color: #bbb;
+    }
+    a.nav-link:hover {
+      color: #fff;
+    }
+    iframe {
+      border-radius: 0.25rem;
+      width: 100%;
+      height: 315px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Projeto Multimídia</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Alternar navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
+          <li class="nav-item"><a class="nav-link" href="series.html">Séries</a></li>
+          <li class="nav-item"><a class="nav-link" href="animes.html">Animes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="container my-5">
+    <h1 class="mb-4 text-center">Filmes</h1>
+
+    <!-- Lista de filmes em cards -->
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <!-- Filme 1 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/cidade_de_deus.jpg" class="card-img-top" alt="Cidade de Deus" />
+          <div class="card-body">
+            <h5 class="card-title">Cidade de Deus</h5>
+            <p><strong>Gênero:</strong> Drama, Crime</p>
+            <p><strong>Duração:</strong> 130 min</p>
+            <p class="card-text">Acompanhe a ascensão do crime organizado na favela Cidade de Deus, no Rio de Janeiro, durante as décadas de 1960 e 1970.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/dcUOO4Itgmw" title="Trailer Cidade de Deus" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 2 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/free_guy.jpg" class="card-img-top" alt="Free Guy: Assumindo o Controle" />
+          <div class="card-body">
+            <h5 class="card-title">Free Guy: Assumindo o Controle</h5>
+            <p><strong>Gênero:</strong> Ação, Comédia, Ficção Científica</p>
+            <p><strong>Duração:</strong> 115 min</p>
+            <p class="card-text">Um caixa de banco descobre que é um personagem não jogável em um videogame e decide se tornar o herói de sua própria história.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/X2m-08cOAbc" title="Trailer Free Guy" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 3 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/dunkirk.jpg" class="card-img-top" alt="Dunkirk" />
+          <div class="card-body">
+            <h5 class="card-title">Dunkirk</h5>
+            <p><strong>Gênero:</strong> Guerra, Drama, História</p>
+            <p><strong>Duração:</strong> 106 min</p>
+            <p class="card-text">Durante a Segunda Guerra Mundial, soldados aliados são evacuados da cidade francesa de Dunkirk sob ataque inimigo.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/F-eMt3SrfFU" title="Trailer Dunkirk" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 4 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/velozes_furiosos_9.jpg" class="card-img-top" alt="Velozes & Furiosos 9" />
+          <div class="card-body">
+            <h5 class="card-title">Velozes & Furiosos 9</h5>
+            <p><strong>Gênero:</strong> Ação, Crime, Suspense</p>
+            <p><strong>Duração:</strong> 145 min</p>
+            <p class="card-text">Dom Toretto e sua equipe enfrentam seu irmão desaparecido, que agora é um assassino mortal e piloto de alto desempenho.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/aSiDu3Ywi8E" title="Trailer Velozes & Furiosos 9" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 5 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/viuva_negra.jpg" class="card-img-top" alt="Viúva Negra" />
+          <div class="card-body">
+            <h5 class="card-title">Viúva Negra</h5>
+            <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
+            <p><strong>Duração:</strong> 134 min</p>
+            <p class="card-text">Natasha Romanoff confronta as partes mais sombrias de sua história quando surge uma conspiração perigosa ligada ao seu passado.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/ybji16u608U" title="Trailer Viúva Negra" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 6 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/tenet.jpg" class="card-img-top" alt="Tenet" />
+          <div class="card-body">
+            <h5 class="card-title">Tenet</h5>
+            <p><strong>Gênero:</strong> Ação, Ficção Científica, Suspense</p>
+            <p><strong>Duração:</strong> 150 min</p>
+            <p class="card-text">Armado apenas com uma palavra — Tenet — e lutando pela sobrevivência do mundo inteiro, um protagonista viaja através de um mundo crepuscular de espionagem internacional em uma missão que se desenrola em algo além do tempo real.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/L3pk_TBkihU" title="Trailer Tenet" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 7 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/joker.jpg" class="card-img-top" alt="Coringa" />
+          <div class="card-body">
+            <h5 class="card-title">Coringa</h5>
+            <p><strong>Gênero:</strong> Crime, Drama, Suspense</p>
+            <p><strong>Duração:</strong> 122 min</p>
+            <p class="card-text">Em Gotham City, Arthur Fleck, um comediante fracassado, é levado à loucura e se transforma no criminoso conhecido como Coringa.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/zAGVQLHvwOY" title="Trailer Coringa" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 8 -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="imagens/parasita.jpg" class="card-img-top" alt="Parasita" />
+          <div class="card-body">
+            <h5 class="card-title">Parasita</h5>
+            <p><strong>Gênero:</strong> Drama, Suspense, Comédia</p>
+            <p><strong>Duração:</strong> 132 min</p>
+            <p class="card-text">Uma família pobre se infiltra na vida de uma família rica, mas as coisas saem do controle de forma inesperada.</p>
+            <div class="ratio ratio-16x9 mt-3">
+              <iframe src="https://www.youtube.com/embed/5xH0HfJHsaY" title="Trailer Parasita" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Filme 9 -->
+      <div class="col">
+        <div class="card h-100">
+        <img src="imagens/interstellar.jpg" class="card-img-top" alt="Interestelar" />
+        <div class="card-body">
+      <h5 class="card-title">Interestelar</h5>
+      <p><strong>Gênero:</strong> Ficção Científica, Drama, Aventura</p>
+      <p><strong>Duração:</strong> 169 min</p>
+      <p class="card-text">Um grupo de exploradores viaja por um buraco de minhoca em busca de um novo lar para a humanidade.</p>
+      <div class="ratio ratio-16x9 mt-3">
+        <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Trailer Interestelar" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Filme 10 -->
+      <div class="col">
+        <div class="card h-100">
+        <img src="imagens/inception.jpg" class="card-img-top" alt="A Origem" />
+      <div class="card-body">
+      <h5 class="card-title">A Origem</h5>
+      <p><strong>Gênero:</strong> Ficção Científica, Ação, Thriller</p>
+      <p><strong>Duração:</strong> 148 min</p>
+      <p class="card-text">Um ladrão que invade os sonhos das pessoas é contratado para plantar uma ideia na mente de um alvo.</p>
+      <div class="ratio ratio-16x9 mt-3">
+        <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" title="Trailer A Origem" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer py-3 mt-auto text-center">
+    <div class="container">
+      <small>© 2025 Meu Site de Filmes. Todos os direitos reservados.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
