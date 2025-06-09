@@ -1,249 +1,952 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Séries - Meu Site de Entretenimento</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Portal de Entretenimento</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body {
-      background-color: #121212;
-      color: #eee;
-    }
-    .navbar, .footer {
-      background-color: #1f1f1f;
-    }
     .card {
-      background-color: #222;
-      color: #ddd;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+  
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   </style>
+  
+  
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Projeto Multimídia</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Alternar navegação">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Entretenimento+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
           <li class="nav-item"><a class="nav-link" href="series.html">Séries</a></li>
           <li class="nav-item"><a class="nav-link" href="animes.html">Animes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="sugestoes.html">Sugestões</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Conteúdo Principal -->
-  <main class="container my-4">
-    <h1 class="mb-4 text-center">Séries em Destaque</h1>
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+  <main class="container py-5">
+    <h1 class="text-center mb-4">📺 Séries em Destaque</h1>
+    <div class="row g-4">
 
-      <!-- Série 1 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/breaking_bad.jpg" class="card-img-top" alt="Breaking Bad" />
+ 
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/dark.jpg" class="card-img-top" alt="Dark">
           <div class="card-body">
-            <h5 class="card-title">Breaking Bad</h5>
-            <p><strong>Gênero:</strong> Crime, Drama, Thriller</p>
-            <p><strong>Duração:</strong> 49 min por episódio</p>
-            <p><strong>Elenco:</strong> Bryan Cranston, Aaron Paul, Anna Gunn</p>
-            <p><strong>Classificação:</strong> 18+</p>
-            <p class="card-text">Um professor de química com câncer começa a produzir metanfetamina para garantir o futuro financeiro da família.</p>
-            <p><strong>Curiosidade:</strong> A série ganhou 16 prêmios Emmy.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/HhesaQXLuRY" title="Trailer Breaking Bad" allowfullscreen></iframe>
+            <h5 class="card-title">Dark</h5>
+            <p><strong>Gênero:</strong> Mistério / Ficção Científica / Drama</p>
+            <p>Quatro famílias descobrem segredos obscuros que atravessam gerações, envolvendo viagens no tempo em uma pequena cidade alemã.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal13">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal13" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Dark</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ESEUoa-mz2c" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/thwit.jpg" class="card-img-top" alt="The Witcher">
+          <div class="card-body">
+            <h5 class="card-title">The Witcher</h5>
+            <p><strong>Gênero:</strong> Fantasia / Ação / Drama</p>
+            <p>O bruxo Geralt de Rívia enfrenta monstros e conflitos morais em um mundo cheio de magia e caos.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal16">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal16" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - The Witcher</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ndl1W4ltcmg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/the100.jpg" class="card-img-top" alt="The 100">
+          <div class="card-body">
+            <h5 class="card-title">The 100</h5>
+            <p><strong>Gênero:</strong> Ficção Científica / Drama</p>
+            <p>Cem jovens são enviados à Terra após um apocalipse nuclear para testar se o planeta é habitável.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal23">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal23" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - The 100</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ia1Fbg96vL0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        
+      
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/lucifer.jpg" class="card-img-top" alt="Lucifer">
+          <div class="card-body">
+            <h5 class="card-title">Lucifer</h5>
+            <p><strong>Gênero:</strong> Fantasia / Policial / Comédia</p>
+            <p>O Diabo se muda para Los Angeles e começa a ajudar a polícia a resolver crimes.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal24">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal24" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Lucifer</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/X4bF_quwNtw" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/arrow.jpg" class="card-img-top" alt="Arrow">
+          <div class="card-body">
+            <h5 class="card-title">Arrow</h5>
+            <p><strong>Gênero:</strong> Ação / Drama / Super-herói</p>
+            <p>Após 5 anos preso em uma ilha, Oliver Queen retorna para combater o crime como o Arqueiro Verde.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal26">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal26" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Arrow</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/ViFb0paKdgg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/supernatural.jpg" class="card-img-top" alt="Supernatural">
+          <div class="card-body">
+            <h5 class="card-title">Supernatural</h5>
+            <p><strong>Gênero:</strong> Sobrenatural / Aventura</p>
+            <p>Os irmãos Winchester enfrentam criaturas sobrenaturais enquanto buscam respostas sobre seu passado.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal27">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal27" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Supernatural</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/t-775JyzDTk" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/theflash.jpg" class="card-img-top" alt="The Flash">
+          <div class="card-body">
+            <h5 class="card-title">The Flash</h5>
+            <p><strong>Gênero:</strong> Ação / Super-herói</p>
+            <p>Barry Allen ganha supervelocidade e usa seus poderes para proteger Central City de ameaças metahumanas.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal29">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal29" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - The Flash</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/IgVyroQjZbE" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/riverdale.jpg" class="card-img-top" alt="Riverdale">
+          <div class="card-body">
+            <h5 class="card-title">Riverdale</h5>
+            <p><strong>Gênero:</strong> Drama / Mistério</p>
+            <p>Um grupo de adolescentes investiga segredos obscuros em sua pequena cidade após uma morte misteriosa.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal30">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal30" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Riverdale</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/HxtLlByaYTc" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/vis.jpg" class="card-img-top" alt="Vis a Vis">
+          <div class="card-body">
+            <h5 class="card-title">Vis a Vis</h5>
+            <p><strong>Gênero:</strong> Drama / Suspense / Prisão</p>
+            <p>Macarena é presa por fraude e precisa sobreviver num presídio feminino cheio de conflitos e perigos.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal31">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal31" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Vis a Vis</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/N08KRAPzsHU" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/gotham.jpg" class="card-img-top" alt="Gotham">
+          <div class="card-body">
+            <h5 class="card-title">Gotham</h5>
+            <p><strong>Gênero:</strong> Ação / Policial / DC</p>
+            <p>A origem dos vilões e heróis de Gotham antes do surgimento do Batman, com foco no detetive James Gordon.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal36">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal36" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Gotham</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/VwOPA2upeCA" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/blackmirror.jpg" class="card-img-top" alt="Black Mirror">
+          <div class="card-body">
+            <h5 class="card-title">Black Mirror</h5>
+            <p><strong>Gênero:</strong> Ficção Científica / Drama</p>
+            <p>Antologia que explora o lado obscuro da tecnologia e suas consequências na sociedade moderna.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal38">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal38" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Black Mirror</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/jDiYGjp5iFg" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/thecrown.jpg" class="card-img-top" alt="The Crown">
+          <div class="card-body">
+            <h5 class="card-title">The Crown</h5>
+            <p><strong>Gênero:</strong> Drama / Histórico</p>
+            <p>A saga da Rainha Elizabeth II desde sua juventude até os desafios de seu reinado.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal43">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal43" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - The Crown</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/JWtnJjn6ng0" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/house.jpg" class="card-img-top" alt="House of Cards">
+          <div class="card-body">
+            <h5 class="card-title">House of Cards</h5>
+            <p><strong>Gênero:</strong> Drama / Política</p>
+            <p>Um político ambicioso manipula o cenário político para alcançar o poder absoluto.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal46">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal46" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - House of Cards</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/8QnMmpfKWvo" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/impuros.jpg" class="card-img-top" alt="Impuros">
+          <div class="card-body">
+            <h5 class="card-title">Impuros</h5>
+            <p><strong>Gênero:</strong> Crime / Drama</p>
+            <p>Dois policiais rivais se unem para combater o crime organizado no subúrbio do Rio de Janeiro.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal57">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal57" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Impuros</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/sONsPC2hLpg" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Série 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/game_of_thrones.jpg" class="card-img-top" alt="Game of Thrones" />
-          <div class="card-body">
-            <h5 class="card-title">Game of Thrones</h5>
-            <p><strong>Gênero:</strong> Fantasia, Drama, Ação</p>
-            <p><strong>Duração:</strong> 57 min por episódio</p>
-            <p><strong>Elenco:</strong> Emilia Clarke, Kit Harington, Peter Dinklage</p>
-            <p><strong>Classificação:</strong> 16+</p>
-            <p class="card-text">Nobres famílias lutam pelo controle dos Sete Reinos de Westeros.</p>
-            <p><strong>Curiosidade:</strong> É uma das séries mais caras já produzidas.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/BpJYNVhGf1s" title="Trailer Game of Thrones" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Série 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/stranger_things.jpg" class="card-img-top" alt="Stranger Things" />
-          <div class="card-body">
-            <h5 class="card-title">Stranger Things</h5>
-            <p><strong>Gênero:</strong> Ficção Científica, Horror, Drama</p>
-            <p><strong>Duração:</strong> 50 min por episódio</p>
-            <p><strong>Elenco:</strong> Millie Bobby Brown, Finn Wolfhard, Winona Ryder</p>
-            <p><strong>Classificação:</strong> 16+</p>
-            <p class="card-text">Um grupo de crianças enfrenta mistérios sobrenaturais na cidade de Hawkins.</p>
-            <p><strong>Curiosidade:</strong> Referências à cultura pop dos anos 80 são abundantes.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/b9EkMc79ZSU" title="Trailer Stranger Things" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-        <!-- Série 4 -->
-    <div class="col">
-        <div class="card h-100">
-            <img src="imagens/peaky_blinders.jpg" class="card-img-top" alt="Peaky Blinders" />
-            <div class="card-body">
-            <h5 class="card-title">Peaky Blinders</h5>
-            <p><strong>Gênero:</strong> Drama, Crime, Histórico</p>
-            <p><strong>Duração:</strong> 55-60 min por episódio</p>
-            <p><strong>Elenco:</strong> Cillian Murphy, Paul Anderson, Helen McCrory</p>
-            <p><strong>Classificação:</strong> 18+</p>
-            <p class="card-text">Família de gângsteres pós-Primeira Guerra Mundial em Birmingham, Inglaterra.</p>
-            <p><strong>Curiosidade:</strong> Conhecida pela trilha sonora moderna e atmosfera sombria.</p>
-            <div class="ratio ratio-16x9 mt-3">
-                <iframe src="https://www.youtube.com/embed/oVzVdvGIC7U" title="Trailer Peaky Blinders" allowfullscreen></iframe>
-            </div>
-            </div>
-        </div>
-        </div>
-
-      <!-- Série 5 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/the_crown.jpg" class="card-img-top" alt="The Crown" />
-          <div class="card-body">
-            <h5 class="card-title">The Crown</h5>
-            <p><strong>Gênero:</strong> Drama, História</p>
-            <p><strong>Duração:</strong> 58 min por episódio</p>
-            <p><strong>Elenco:</strong> Claire Foy, Olivia Colman, Tobias Menzies</p>
-            <p><strong>Classificação:</strong> 16+</p>
-            <p class="card-text">A vida da Rainha Elizabeth II desde sua juventude até os dias atuais.</p>
-            <p><strong>Curiosidade:</strong> Ganhou vários prêmios Emmy e Globos de Ouro.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/JWtnJjn6ng0" title="Trailer The Crown" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Série 6 -->
-<div class="col">
-  <div class="card h-100">
-    <img src="imagens/ir_mandou_matar.jpg" class="card-img-top" alt="Irmandade" />
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/got.jpg" class="card-img-top" alt="Game of Thrones">
     <div class="card-body">
-      <h5 class="card-title">Irmandade</h5>
-      <p><strong>Gênero:</strong> Crime, Drama</p>
-      <p><strong>Duração:</strong> 45-50 min por episódio</p>
-      <p><strong>Elenco:</strong> Seu Jorge, Naruna Costa, Hermila Guedes</p>
-      <p><strong>Classificação:</strong> 18+</p>
-      <p class="card-text">Nos anos 90, uma advogada descobre que seu irmão, há muito desaparecido, é líder de uma facção criminosa e acaba se infiltrando nela a mando da polícia.</p>
-      <p><strong>Curiosidade:</strong> A série é baseada em fatos reais da criminalidade paulista.</p>
-      <div class="ratio ratio-16x9 mt-3">
-        <iframe src="https://www.youtube.com/embed/xt11-wM_UdY" title="Trailer Irmandade" allowfullscreen></iframe>
+      <h5 class="card-title">Game of Thrones</h5>
+      <p><strong>Gênero:</strong> Fantasia / Drama</p>
+      <p>Nove famílias nobres lutam pelo controle do trono de ferro em Westeros.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal2">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Game of Thrones</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/KPLWWIOCOOQ" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-      <!-- Série 7 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/black_mirror.jpg" class="card-img-top" alt="Black Mirror" />
-          <div class="card-body">
-            <h5 class="card-title">Black Mirror</h5>
-            <p><strong>Gênero:</strong> Ficção Científica, Drama, Thriller</p>
-            <p><strong>Duração:</strong> 60 min por episódio</p>
-            <p><strong>Elenco:</strong> Diversos (antologia)</p>
-            <p><strong>Classificação:</strong> 16+</p>
-            <p class="card-text">Antologia de histórias que exploram o impacto da tecnologia na sociedade.</p>
-            <p><strong>Curiosidade:</strong> Muitos episódios têm finais alternativos.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/jDiYGjp5iFg" title="Trailer Black Mirror" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Série 8 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/the_mandalorian.jpg" class="card-img-top" alt="The Mandalorian" />
-          <div class="card-body">
-            <h5 class="card-title">The Mandalorian</h5>
-            <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
-            <p><strong>Duração:</strong> 35-40 min por episódio</p>
-            <p><strong>Elenco:</strong> Pedro Pascal, Gina Carano, Carl Weathers</p>
-            <p><strong>Classificação:</strong> 12+</p>
-            <p class="card-text">Um caçador de recompensas solitário explora a galáxia após a queda do Império.</p>
-            <p><strong>Curiosidade:</strong> O personagem Baby Yoda se tornou um fenômeno cultural.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/aOC8E8z_ifw" title="Trailer The Mandalorian" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Série 9 -->
-    <div class="col">
-    <div class="card h-100">
-        <img src="imagens/3porcento.jpg" class="card-img-top" alt="3%" />
-        <div class="card-body">
-        <h5 class="card-title">3%</h5>
-        <p><strong>Gênero:</strong> Ficção Científica, Drama</p>
-        <p><strong>Duração:</strong> 45 min por episódio</p>
-        <p><strong>Elenco:</strong> João Miguel, Bianca Comparato, Michel Gomes</p>
-        <p><strong>Classificação:</strong> 16+</p>
-        <p class="card-text">Em um futuro distópico, jovens passam por um processo rigoroso para ter acesso ao lado privilegiado da sociedade — mas apenas 3% são aprovados.</p>
-        <p><strong>Curiosidade:</strong> Foi a primeira série original brasileira da Netflix.</p>
-        <div class="ratio ratio-16x9 mt-3">
-            <iframe src="https://www.youtube.com/embed/8yyzNQfaQR8" title="Trailer 3%" allowfullscreen></iframe>
-        </div>
-        </div>
+<!-- Série 4 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/st.jpg" class="card-img-top" alt="Stranger Things">
+    <div class="card-body">
+      <h5 class="card-title">Stranger Things</h5>
+      <p><strong>Gênero:</strong> Suspense / Ficção</p>
+      <p>Um grupo de crianças enfrenta forças sobrenaturais e segredos do governo.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal4">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
     </div>
+  </div>
+  <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Stranger Things</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/mnd7sFt5c3A" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+</div>
 
-      <!-- Série 10 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/the_witcher.jpg" class="card-img-top" alt="The Witcher" />
+<!-- Série 5 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/pk.jpg" class="card-img-top" alt="Peaky Blinders">
+    <div class="card-body">
+      <h5 class="card-title">Peaky Blinders</h5>
+      <p><strong>Gênero:</strong> Crime / Drama</p>
+      <p>Uma gangue de Birmingham sobe ao poder no pós-guerra liderada por Tommy Shelby.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal5">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Peaky Blinders</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/oVzVdvGIC7U" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/dom.jpg" class="card-img-top" alt="Dom">
           <div class="card-body">
-            <h5 class="card-title">The Witcher</h5>
-            <p><strong>Gênero:</strong> Fantasia, Ação, Aventura</p>
-            <p><strong>Duração:</strong> 60 min por episódio</p>
-            <p><strong>Elenco:</strong> Henry Cavill, Anya Chalotra, Freya Allan</p>
-            <p><strong>Classificação:</strong> 16+</p>
-            <p class="card-text">Geralt de Rívia, um caçador de monstros, luta para encontrar seu lugar em um mundo turbulento.</p>
-            <p><strong>Curiosidade:</strong> Baseado na série de livros de Andrzej Sapkowski.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/ndl1W4ltcmg" title="Trailer The Witcher" allowfullscreen></iframe>
+            <h5 class="card-title">Dom</h5>
+            <p><strong>Gênero:</strong> Crime / Drama</p>
+            <p>A história real de Dom, um jovem que se torna um dos maiores criminosos do Rio de Janeiro, enquanto seu pai é policial.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal58">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal58" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - Dom</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/5PP9bZYGA0o" allowfullscreen></iframe>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/lol.jpg" class="card-img-top" alt="LOL Brasil">
+          <div class="card-body">
+            <h5 class="card-title">LOL: Brasil</h5>
+            <p><strong>Gênero:</strong> Comédia / Reality</p>
+            <p>Comediantes brasileiros competem para fazer os outros rirem sem rir, em uma competição hilária.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal59">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal59" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - LOL: Brasil</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/0sC-qiZDuEA" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img src="img/thelast.jpg" class="card-img-top" alt="The Last of Us">
+          <div class="card-body">
+            <h5 class="card-title">The Last of Us</h5>
+            <p><strong>Gênero:</strong> Drama / Ação / Ficção Científica</p>
+            <p>Em um mundo pós-apocalíptico, Joel escolta Ellie, uma jovem imune a uma infecção mortal, em uma perigosa jornada.</p>
+            <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal60">🎥 Assistir Trailer</button>
+            <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+          </div>
+        </div>
+        <div class="modal fade" id="modal60" tabindex="-1" aria-hidden="true">
+          <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content bg-dark">
+              <div class="modal-header border-0">
+                <h5 class="modal-title text-white">Trailer - The Last of Us</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body p-0">
+                <div class="ratio ratio-16x9">
+                  <iframe src="https://www.youtube.com/embed/IcR-6y3Q9XI" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bom Dia, Verônica -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/bomdia.jpg" class="card-img-top" alt="Bom Dia, Verônica">
+    <div class="card-body">
+      <h5 class="card-title">Bom Dia, Verônica</h5>
+      <p><strong>Gênero:</strong> Thriller / Drama</p>
+      <p>Uma escrivã enfrenta uma rede de corrupção enquanto tenta proteger sua família.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal62">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal62" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Bom Dia, Verônica</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/OmCnSsPLREQ" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DNA do Crime -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/dna.jpeg" class="card-img-top" alt="DNA do Crime">
+    <div class="card-body">
+      <h5 class="card-title">DNA do Crime</h5>
+      <p><strong>Gênero:</strong> Crime / Documentário</p>
+      <p>Investigação detalhada sobre casos reais e o papel da ciência forense.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal63">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal63" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - DNA do Crime</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/L7YeC_quE-o" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sandman -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/sandman.jpg" class="card-img-top" alt="Sandman">
+    <div class="card-body">
+      <h5 class="card-title">Sandman</h5>
+      <p><strong>Gênero:</strong> Fantasia / Drama</p>
+      <p>O Senhor dos Sonhos deve restaurar a ordem após escapar da prisão por décadas.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal64">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal64" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Sandman</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/GPHwpJtnxzM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ 
+      <!-- Série 1 -->
+ <div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/bb.jpg" class="card-img-top" alt="Breaking Bad">
+    <div class="card-body">
+      <h5 class="card-title">Breaking Bad</h5>
+      <p><strong>Gênero:</strong> Crime / Drama</p>
+      <p>Um professor de química do ensino médio vira um chefão do tráfico de metanfetamina.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal1">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Breaking Bad</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/HhesaQXLuRY" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Série 7 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/narcos.jpg" class="card-img-top" alt="Narcos">
+    <div class="card-body">
+      <h5 class="card-title">Narcos</h5>
+      <p><strong>Gênero:</strong> Policial / Drama</p>
+      <p>A ascensão e queda de Pablo Escobar, o maior narcotraficante da história.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal7">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal7" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Narcos</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/xl8zdCY-abw" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Série 8 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/lupin.jpg" class="card-img-top" alt="Lupin">
+    <div class="card-body">
+      <h5 class="card-title">Lupin</h5>
+      <p><strong>Gênero:</strong> Mistério / Crime</p>
+      <p>Assane Diop se inspira em Lupin para vingar seu pai e enganar a elite parisiense.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal8">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal8" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Lupin</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/ga0iTWXCGa0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Série 9 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/vikings.jpg" class="card-img-top" alt="Vikings">
+    <div class="card-body">
+      <h5 class="card-title">Vikings</h5>
+      <p><strong>Gênero:</strong> Ação / Drama</p>
+      <p>A saga de Ragnar Lothbrok, um guerreiro lendário nórdico e suas conquistas.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal9">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal9" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Vikings</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/9GgxinPwAGc" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Série 10 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/lacasa.jpg" class="card-img-top" alt="La Casa de Papel">
+    <div class="card-body">
+      <h5 class="card-title">La Casa de Papel</h5>
+      <p><strong>Gênero:</strong> Ação / Roubo</p>
+      <p>O Professor recruta oito criminosos para realizar o maior assalto da história.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal10">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal10" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - La Casa de Papel</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/iS5xXr-GOnM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Série 11 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/you.jpg" class="card-img-top" alt="You">
+    <div class="card-body">
+      <h5 class="card-title">You</h5>
+      <p><strong>Gênero:</strong> Thriller / Drama</p>
+      <p>Um stalker obsessivo faz de tudo para entrar na vida de suas paixões.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal11">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal11" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - You</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/mNkyrdzzWok" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/irmandade.jpg" class="card-img-top" alt="Irmandade">
+    <div class="card-body">
+      <h5 class="card-title">Irmandade</h5>
+      <p><strong>Gênero:</strong> Crime / Drama</p>
+      <p>Uma advogada é forçada a trabalhar com uma facção criminosa liderada por seu irmão preso. Conflitos entre justiça, lealdade e sobrevivência.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalIrmandade">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Série - R$ 9,90</button>
+    </div>
+  </div>
+
+  <!-- Modal do Trailer -->
+  <div class="modal fade" id="modalIrmandade" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Irmandade</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/xt11-wM_UdY" title="Trailer Irmandade" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </main>
 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- SCRIPT PARA PAUSAR TRAILERS -->
+  <script>
+    function stopTrailer(iframeId) {
+      document.getElementById(iframeId).src = '';
+    }
+  </script>
   <!-- Footer -->
-  <footer class="footer text-center py-3">
+  <footer class="bg-dark text-center text-white py-4 mt-5">
     <div class="container">
-      <small>&copy; 2025 Meu Site de Entretenimento. Todos os direitos reservados.</small>
+      <p class="mb-0">© 2025 Entretenimento+. Todos os direitos reservados.</p>
+        <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+   
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>

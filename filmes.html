@@ -1,238 +1,952 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Filmes - Meu Site de Filmes</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <title>Portal de Entretenimento</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .navbar, .footer {
-      background-color: #1f1f1f;
-    }
     .card {
-      background-color: #1e1e1e;
-      border: none;
-      margin-bottom: 2rem;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
-    .card-title, .card-text {
-      color: #f0f0f0;
+  
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
     }
-    a.nav-link {
-      color: #bbb;
-    }
-    a.nav-link:hover {
-      color: #fff;
-    }
-    iframe {
-      border-radius: 0.25rem;
-      width: 100%;
-      height: 315px;
+  
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   </style>
+
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Projeto Multimídia</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Alternar navegação">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Entretenimento+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
           <li class="nav-item"><a class="nav-link" href="series.html">Séries</a></li>
           <li class="nav-item"><a class="nav-link" href="animes.html">Animes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="sugestoes.html">Sugestões</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
   <!-- Conteúdo Principal -->
-  <main class="container my-5">
-    <h1 class="mb-4 text-center">Filmes</h1>
+  <main class="container py-5">
+    <h1 class="text-center mb-4">🎥 Filmes em Destaque</h1>
+    <div class="row g-4">
+      
+      <div class="row g-4">
 
-    <!-- Lista de filmes em cards -->
-    <div class="row row-cols-1 row-cols-md-2 g-4">
-
-      <!-- Filme 1 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/cidade_de_deus.jpg" class="card-img-top" alt="Cidade de Deus" />
-          <div class="card-body">
-            <h5 class="card-title">Cidade de Deus</h5>
-            <p><strong>Gênero:</strong> Drama, Crime</p>
-            <p><strong>Duração:</strong> 130 min</p>
-            <p class="card-text">Acompanhe a ascensão do crime organizado na favela Cidade de Deus, no Rio de Janeiro, durante as décadas de 1960 e 1970.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/dcUOO4Itgmw" title="Trailer Cidade de Deus" allowfullscreen></iframe>
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/forrest_gump.jpg" class="card-img-top" alt="Forrest Gump">
+            <div class="card-body">
+              <h5 class="card-title">Forrest Gump</h5>
+              <p><strong>Gênero:</strong> Drama / Romance</p>
+              <p>Um homem simples com um coração puro vive momentos marcantes da história americana.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal17">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal17" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Forrest Gump</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/bLvqoHBptjg" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 2 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/free_guy.jpg" class="card-img-top" alt="Free Guy: Assumindo o Controle" />
-          <div class="card-body">
-            <h5 class="card-title">Free Guy: Assumindo o Controle</h5>
-            <p><strong>Gênero:</strong> Ação, Comédia, Ficção Científica</p>
-            <p><strong>Duração:</strong> 115 min</p>
-            <p class="card-text">Um caixa de banco descobre que é um personagem não jogável em um videogame e decide se tornar o herói de sua própria história.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/X2m-08cOAbc" title="Trailer Free Guy" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/titanic.jpg" class="card-img-top" alt="Titanic">
+            <div class="card-body">
+              <h5 class="card-title">Titanic</h5>
+              <p><strong>Gênero:</strong> Romance / Drama</p>
+              <p>Uma jovem da alta sociedade se apaixona por um artista a bordo do trágico Titanic.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal19">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal19" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Titanic</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/kVrqfYjkTdQ" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 3 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/dunkirk.jpg" class="card-img-top" alt="Dunkirk" />
-          <div class="card-body">
-            <h5 class="card-title">Dunkirk</h5>
-            <p><strong>Gênero:</strong> Guerra, Drama, História</p>
-            <p><strong>Duração:</strong> 106 min</p>
-            <p class="card-text">Durante a Segunda Guerra Mundial, soldados aliados são evacuados da cidade francesa de Dunkirk sob ataque inimigo.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/F-eMt3SrfFU" title="Trailer Dunkirk" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/matrix.jpg" class="card-img-top" alt="Matrix">
+            <div class="card-body">
+              <h5 class="card-title">Matrix</h5>
+              <p><strong>Gênero:</strong> Ficção Científica / Ação</p>
+              <p>Um hacker descobre que o mundo ao seu redor é uma simulação e precisa lutar pela liberdade da humanidade.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal20">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal20" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Matrix</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/vKQi3bBA1y8" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 4 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/velozes_furiosos_9.jpg" class="card-img-top" alt="Velozes & Furiosos 9" />
-          <div class="card-body">
-            <h5 class="card-title">Velozes & Furiosos 9</h5>
-            <p><strong>Gênero:</strong> Ação, Crime, Suspense</p>
-            <p><strong>Duração:</strong> 145 min</p>
-            <p class="card-text">Dom Toretto e sua equipe enfrentam seu irmão desaparecido, que agora é um assassino mortal e piloto de alto desempenho.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/aSiDu3Ywi8E" title="Trailer Velozes & Furiosos 9" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/srdosaneis.jpg" class="card-img-top" alt="O Senhor dos Anéis">
+            <div class="card-body">
+              <h5 class="card-title">O Senhor dos Anéis: A Sociedade do Anel</h5>
+              <p><strong>Gênero:</strong> Fantasia / Aventura</p>
+              <p>Um hobbit embarca numa missão épica para destruir um anel poderoso que ameaça toda a Terra Média.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal22">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal22" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Senhor dos Anéis</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/V75dMMIW2B4" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 5 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/viuva_negra.jpg" class="card-img-top" alt="Viúva Negra" />
-          <div class="card-body">
-            <h5 class="card-title">Viúva Negra</h5>
-            <p><strong>Gênero:</strong> Ação, Aventura, Ficção Científica</p>
-            <p><strong>Duração:</strong> 134 min</p>
-            <p class="card-text">Natasha Romanoff confronta as partes mais sombrias de sua história quando surge uma conspiração perigosa ligada ao seu passado.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/ybji16u608U" title="Trailer Viúva Negra" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/clubedaluta.jpg" class="card-img-top" alt="Clube da Luta">
+            <div class="card-body">
+              <h5 class="card-title">Clube da Luta</h5>
+              <p><strong>Gênero:</strong> Drama / Suspense</p>
+              <p>Um homem desiludido forma um clube secreto de lutas com um vendedor de sabão carismático.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal23">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal23" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Clube da Luta</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/qtRKdVHc-cE" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 6 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/tenet.jpg" class="card-img-top" alt="Tenet" />
-          <div class="card-body">
-            <h5 class="card-title">Tenet</h5>
-            <p><strong>Gênero:</strong> Ação, Ficção Científica, Suspense</p>
-            <p><strong>Duração:</strong> 150 min</p>
-            <p class="card-text">Armado apenas com uma palavra — Tenet — e lutando pela sobrevivência do mundo inteiro, um protagonista viaja através de um mundo crepuscular de espionagem internacional em uma missão que se desenrola em algo além do tempo real.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/L3pk_TBkihU" title="Trailer Tenet" allowfullscreen></iframe>
+        
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/vingadores.jpg" class="card-img-top" alt="Vingadores: Ultimato">
+            <div class="card-body">
+              <h5 class="card-title">Vingadores: Ultimato</h5>
+              <p><strong>Gênero:</strong> Ação / Super-herói</p>
+              <p>Após o estalo de Thanos, os Vingadores se unem para desfazer a destruição e restaurar a esperança ao universo.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal30">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal30" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Vingadores: Ultimato</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/TcMBFSGVi1c" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 7 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/joker.jpg" class="card-img-top" alt="Coringa" />
-          <div class="card-body">
-            <h5 class="card-title">Coringa</h5>
-            <p><strong>Gênero:</strong> Crime, Drama, Suspense</p>
-            <p><strong>Duração:</strong> 122 min</p>
-            <p class="card-text">Em Gotham City, Arthur Fleck, um comediante fracassado, é levado à loucura e se transforma no criminoso conhecido como Coringa.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/zAGVQLHvwOY" title="Trailer Coringa" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/grandetruque.jpg" class="card-img-top" alt="O Grande Truque">
+            <div class="card-body">
+              <h5 class="card-title">O Grande Truque</h5>
+              <p><strong>Gênero:</strong> Drama / Mistério</p>
+              <p>Dois mágicos rivais se enfrentam em uma batalha de truques e obsessões com consequências perigosas.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal31">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal31" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Grande Truque</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/o4gHCmTQDVI" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- Filme 8 -->
-      <div class="col">
-        <div class="card h-100">
-          <img src="imagens/parasita.jpg" class="card-img-top" alt="Parasita" />
-          <div class="card-body">
-            <h5 class="card-title">Parasita</h5>
-            <p><strong>Gênero:</strong> Drama, Suspense, Comédia</p>
-            <p><strong>Duração:</strong> 132 min</p>
-            <p class="card-text">Uma família pobre se infiltra na vida de uma família rica, mas as coisas saem do controle de forma inesperada.</p>
-            <div class="ratio ratio-16x9 mt-3">
-              <iframe src="https://www.youtube.com/embed/5xH0HfJHsaY" title="Trailer Parasita" allowfullscreen></iframe>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/oregresso.jpg" class="card-img-top" alt="O Regresso">
+            <div class="card-body">
+              <h5 class="card-title">O Regresso</h5>
+              <p><strong>Gênero:</strong> Aventura / Drama</p>
+              <p>Um explorador é deixado para morrer por seus companheiros e sobrevive a condições extremas para buscar vingança.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal34">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal34" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Regresso</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/LoebZZ8K5N0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/coracao.jpg" class="card-img-top" alt="Coração Valente">
+            <div class="card-body">
+              <h5 class="card-title">Coração Valente</h5>
+              <p><strong>Gênero:</strong> Épico / Guerra / Drama</p>
+              <p>William Wallace lidera a Escócia em uma guerra épica pela independência contra a tirania inglesa.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal36">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal36" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Coração Valente</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/_HbLuf0ik0w" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/redesocial.jpg" class="card-img-top" alt="A Rede Social">
+            <div class="card-body">
+              <h5 class="card-title">A Rede Social</h5>
+              <p><strong>Gênero:</strong> Biografia / Drama</p>
+              <p>A história da criação do Facebook e a batalha judicial que se seguiu entre os fundadores.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal37">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal37" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - A Rede Social</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/lB95KLmpLR4" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/bastardos_inglorios.jpg" class="card-img-top" alt="Bastardos Inglórios">
+            <div class="card-body">
+              <h5 class="card-title">Bastardos Inglórios</h5>
+              <p><strong>Gênero:</strong> Guerra / Ação / Drama</p>
+              <p>Durante a Segunda Guerra Mundial, um grupo de soldados judeus americanos caça nazistas na França ocupada.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal38">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal38" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Bastardos Inglórios</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/KnrRy6kSFF0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/eraumavez.jpg" class="card-img-top" alt="Era Uma Vez em... Hollywood">
+            <div class="card-body">
+              <h5 class="card-title">Era Uma Vez em... Hollywood</h5>
+              <p><strong>Gênero:</strong> Comédia / Drama</p>
+              <p>Um ator decadente e seu dublê tentam se reinventar em meio à efervescente Hollywood dos anos 60.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal39">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal39" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Era Uma Vez em... Hollywood</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/Scf8nIJCvs4" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/achegada.jpg" class="card-img-top" alt="A Chegada">
+            <div class="card-body">
+              <h5 class="card-title">A Chegada</h5>
+              <p><strong>Gênero:</strong> Ficção Científica / Drama</p>
+              <p>Quando alienígenas pousam na Terra, uma linguista é recrutada para decifrar sua linguagem e revelar intenções.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal40">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal40" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - A Chegada</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/tFMo3UJ4B4g" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/grandhotel.jpg" class="card-img-top" alt="O Grande Hotel Budapeste">
+            <div class="card-body">
+              <h5 class="card-title">O Grande Hotel Budapeste</h5>
+              <p><strong>Gênero:</strong> Comédia / Aventura</p>
+              <p>As aventuras de um concierge e seu protegido em um famoso hotel europeu entre guerras.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal41">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal41" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Grande Hotel Budapeste</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/1Fg5iWmQjwk" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/lobo.jpg" class="card-img-top" alt="O Lobo de Wall Street">
+            <div class="card-body">
+              <h5 class="card-title">O Lobo de Wall Street</h5>
+              <p><strong>Gênero:</strong> Biografia / Drama / Comédia</p>
+              <p>A ascensão e queda do corretor de ações Jordan Belfort em Wall Street.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal43">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal43" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Lobo de Wall Street</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/iszwuX1AK6A" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/o_pianista.jpg" class="card-img-top" alt="O Pianista">
+            <div class="card-body">
+              <h5 class="card-title">O Pianista</h5>
+              <p><strong>Gênero:</strong> Drama / Guerra / Biografia</p>
+              <p>A história real de um pianista judeu tentando sobreviver durante a ocupação nazista em Varsóvia.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal45">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal45" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - O Pianista</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/rLgGA6XA7pY" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/madmax.jpg" class="card-img-top" alt="Mad Max: Estrada da Fúria">
+            <div class="card-body">
+              <h5 class="card-title">Mad Max: Estrada da Fúria</h5>
+              <p><strong>Gênero:</strong> Ação / Ficção Científica / Aventura</p>
+              <p>Em um mundo pós-apocalíptico, Max ajuda uma mulher rebelde a fugir de um tirano em uma perseguição alucinante.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal47">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal47" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Mad Max: Estrada da Fúria</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/hEJnMQG9ev8" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/django.jpg" class="card-img-top" alt="Django Livre">
+            <div class="card-body">
+              <h5 class="card-title">Django Livre</h5>
+              <p><strong>Gênero:</strong> Faroeste / Drama / Ação</p>
+              <p>Um ex-escravo se torna caçador de recompensas para resgatar sua esposa das garras de um cruel fazendeiro.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal57">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal57" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Django Livre</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/0fUCuvNlOCg" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+        <!-- Filme 1 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/interstellar.jpg" class="card-img-top" alt="Interestelar">
+            <div class="card-body">
+              <h5 class="card-title">Interestelar</h5>
+              <p><strong>Gênero:</strong> Ficção Científica</p>
+              <p>Uma missão busca um novo lar para a humanidade através de um buraco de minhoca.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal1">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Interestelar</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Filme 2 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/aorigem.jpg" class="card-img-top" alt="A Origem">
+            <div class="card-body">
+              <h5 class="card-title">A Origem</h5>
+              <p><strong>Gênero:</strong> Ação / Suspense</p>
+              <p>Um ladrão invade sonhos para plantar ideias no subconsciente de suas vítimas.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal2">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - A Origem</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Filme 3 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/joker.jpg" class="card-img-top" alt="Coringa">
+            <div class="card-body">
+              <h5 class="card-title">Coringa</h5>
+              <p><strong>Gênero:</strong> Drama / Crime</p>
+              <p>A transformação de Arthur Fleck no temido vilão de Gotham.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal3">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Coringa</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/zAGVQLHvwOY" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Filme 4 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/avatar.jpg" class="card-img-top" alt="Avatar 2">
+            <div class="card-body">
+              <h5 class="card-title">Avatar: O Caminho da Água</h5>
+              <p><strong>Gênero:</strong> Aventura / Fantasia</p>
+              <p>Continuação da saga dos Na'vi e sua luta pela sobrevivência.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal4">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Avatar 2</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/d9MyW72ELq0" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <!-- Filme 9 -->
-      <div class="col">
-        <div class="card h-100">
-        <img src="imagens/interstellar.jpg" class="card-img-top" alt="Interestelar" />
-        <div class="card-body">
-      <h5 class="card-title">Interestelar</h5>
-      <p><strong>Gênero:</strong> Ficção Científica, Drama, Aventura</p>
-      <p><strong>Duração:</strong> 169 min</p>
-      <p class="card-text">Um grupo de exploradores viaja por um buraco de minhoca em busca de um novo lar para a humanidade.</p>
-      <div class="ratio ratio-16x9 mt-3">
-        <iframe src="https://www.youtube.com/embed/zSWdZVtXT7E" title="Trailer Interestelar" allowfullscreen></iframe>
+        <!-- Filme 5 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/duna.jpg" class="card-img-top" alt="Duna">
+    <div class="card-body">
+      <h5 class="card-title">Duna</h5>
+      <p><strong>Gênero:</strong> Ficção Científica / Aventura</p>
+      <p>Paul Atreides precisa proteger seu povo e controlar o planeta mais perigoso do universo.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal5">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal5" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Duna</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/n9xhJrPXop4" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-      <!-- Filme 10 -->
-      <div class="col">
-        <div class="card h-100">
-        <img src="imagens/inception.jpg" class="card-img-top" alt="A Origem" />
-      <div class="card-body">
-      <h5 class="card-title">A Origem</h5>
-      <p><strong>Gênero:</strong> Ficção Científica, Ação, Thriller</p>
-      <p><strong>Duração:</strong> 148 min</p>
-      <p class="card-text">Um ladrão que invade os sonhos das pessoas é contratado para plantar uma ideia na mente de um alvo.</p>
-      <div class="ratio ratio-16x9 mt-3">
-        <iframe src="https://www.youtube.com/embed/YoHD9XEInc0" title="Trailer A Origem" allowfullscreen></iframe>
+<!-- Filme 6 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/oppe.jpg" class="card-img-top" alt="Oppenheimer">
+    <div class="card-body">
+      <h5 class="card-title">Oppenheimer</h5>
+      <p><strong>Gênero:</strong> Drama / Biografia</p>
+      <p>A história de J. Robert Oppenheimer e a criação da bomba atômica.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal6">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal6" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Oppenheimer</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/uYPbbksJxIg" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
 
+<!-- Filme 7 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/top.jpg" class="card-img-top" alt="Top Gun: Maverick">
+    <div class="card-body">
+      <h5 class="card-title">Top Gun: Maverick</h5>
+      <p><strong>Gênero:</strong> Ação / Drama</p>
+      <p>Maverick retorna para treinar a nova geração de pilotos de elite.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal7">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
     </div>
-  </main>
+  </div>
+  <div class="modal fade" id="modal7" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Top Gun: Maverick</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/giXco2jaZ_4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filme 8 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/batman.jpg" class="card-img-top" alt="The Batman">
+    <div class="card-body">
+      <h5 class="card-title">The Batman</h5>
+      <p><strong>Gênero:</strong> Ação / Policial</p>
+      <p>Bruce Wayne enfrenta um serial killer enquanto descobre segredos de Gotham.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal8">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal8" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - The Batman</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/mqqft2x_Aa4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filme 9 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/gg.jpeg" class="card-img-top" alt="Guardiões da Galáxia 3">
+    <div class="card-body">
+      <h5 class="card-title">Guardiões da Galáxia Vol. 3</h5>
+      <p><strong>Gênero:</strong> Ação / Aventura</p>
+      <p>O grupo enfrenta uma nova ameaça enquanto lidam com o passado de Rocket.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal9">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal9" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Guardiões da Galáxia Vol. 3</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/u3V5KDHRQvk" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filme 10 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/barbie.jpg" class="card-img-top" alt="Barbie">
+    <div class="card-body">
+      <h5 class="card-title">Barbie</h5>
+      <p><strong>Gênero:</strong> Comédia / Fantasia</p>
+      <p>Barbie começa a questionar sua realidade e embarca em uma jornada para o mundo real.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal10">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal10" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Barbie</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/pBk4NYhWNMM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/parasita.jpg" class="card-img-top" alt="Parasita">
+    <div class="card-body">
+      <h5 class="card-title">Parasita</h5>
+      <p><strong>Gênero:</strong> Drama / Suspense</p>
+      <p>Uma família pobre se infiltra na vida de uma família rica com consequências inesperadas.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal12">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal12" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Parasita</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/xWEf44OcU1w" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Filme 16 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/gladiador.jpeg" class="card-img-top" alt="Gladiador">
+    <div class="card-body">
+      <h5 class="card-title">Gladiador</h5>
+      <p><strong>Gênero:</strong> Ação / Drama</p>
+      <p>Um general romano é traído e se torna um gladiador em busca de vingança contra o imperador corrupto.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal16">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">🎟️ Assistir Filme - R$ 9,90</button>
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="modal16" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Gladiador</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/cXg62-t8BWs" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- SCRIPT PARA PAUSAR TRAILERS -->
+<script>
+  function stopTrailer(iframeId) {
+    document.getElementById(iframeId).src = '';
+  }
+</script>
 
   <!-- Footer -->
-  <footer class="footer py-3 mt-auto text-center">
+  <footer class="bg-dark text-center text-white py-4 mt-5">
     <div class="container">
-      <small>© 2025 Meu Site de Filmes. Todos os direitos reservados.</small>
+      <p class="mb-0">© 2025 Entretenimento+. Todos os direitos reservados.</p>
+        <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+   
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>

@@ -1,57 +1,959 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <title>Animes - CineVerso</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal de Entretenimento</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { background-color: #111; color: #eee; }
-    .navbar, footer { background-color: #222; }
-    footer { padding: 1rem 0; text-align: center; color: #bbb; margin-top: 3rem; }
+
+    
+    .card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .card-img-top {
+      height: 300px;
+      object-fit: cover;
+    }
+  
+    .card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   </style>
+
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">Projeto Multimídia</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Alternar navegação">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Entretenimento+</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
           <li class="nav-item"><a class="nav-link" href="filmes.html">Filmes</a></li>
           <li class="nav-item"><a class="nav-link" href="series.html">Séries</a></li>
           <li class="nav-item"><a class="nav-link" href="animes.html">Animes</a></li>
-          <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+          <li class="nav-item"><a class="nav-link" href="sugestoes.html">Sugestões</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-<div class="container mt-5">
-  <h1 class="mb-4">Animes</h1>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      <div class="card h-100 bg-dark text-light">
-        <img src="img/anime1.jpg" class="card-img-top" alt="Anime 1">
-        <div class="card-body">
-          <h5 class="card-title">Anime 1</h5>
-          <p class="card-text">Descrição rápida do anime.</p>
+  <!-- Conteúdo Principal -->
+  <main class="container py-5">
+    <h1 class="text-center mb-4">🎌 Animes em Destaque</h1>
+    <div class="row g-4">
+
+      <div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/onepunch.jpg" class="card-img-top" alt="One Punch Man">
+    <div class="card-body">
+      <h5 class="card-title">One Punch Man</h5>
+      <p><strong>Gênero:</strong> Ação / Comédia</p>
+      <p>Saitama derrota qualquer inimigo com um único soco, mas vive entediado por isso.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal17">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal17" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - One Punch Man</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/Poo5lqoWSGw" allowfullscreen></iframe>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2025 CineVerso. Todos os direitos reservados.</p>
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/haik.jpg" class="card-img-top" alt="Haikyuu!!">
+    <div class="card-body">
+      <h5 class="card-title">Haikyuu!!</h5>
+      <p><strong>Gênero:</strong> Esporte / Drama</p>
+      <p>Shoyo Hinata sonha em ser um grande jogador de vôlei, superando obstáculos com paixão e trabalho em equipe.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal25">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
   </div>
-</footer>
+  <div class="modal fade" id="modal25" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Haikyuu!!</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/JOGp2c7-cKc" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/myhero.jpg" class="card-img-top" alt="My Hero Academia">
+    <div class="card-body">
+      <h5 class="card-title">My Hero Academia</h5>
+      <p><strong>Gênero:</strong> Ação / Superpoderes</p>
+      <p>Em um mundo onde quase todos têm poderes, um garoto sem habilidades sonha em ser herói.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal26">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal26" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - My Hero Academia</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/diEMNV1tB2I" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/cowboy.jpg" class="card-img-top" alt="Cowboy Bebop">
+    <div class="card-body">
+      <h5 class="card-title">Cowboy Bebop</h5>
+      <p><strong>Gênero:</strong> Ação / Ficção Científica</p>
+      <p>Caçadores de recompensas viajam pelo espaço enfrentando perigos e seus próprios passados.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal31">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal31" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Cowboy Bebop</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/AJKEXDKBVdk" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/fairy.jpg" class="card-img-top" alt="Fairy Tail">
+    <div class="card-body">
+      <h5 class="card-title">Fairy Tail</h5>
+      <p><strong>Gênero:</strong> Ação / Aventura / Fantasia</p>
+      <p>Membros da guilda Fairy Tail embarcam em aventuras mágicas para proteger seus amigos e o mundo.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal34">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal34" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Fairy Tail</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/uEXVsaTRhzA" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/code.jpg" class="card-img-top" alt="Code Geass">
+    <div class="card-body">
+      <h5 class="card-title">Code Geass</h5>
+      <p><strong>Gênero:</strong> Mecha / Estratégia / Ação</p>
+      <p>Lelouch ganha um poder especial e lidera uma rebelião para derrubar um império opressor.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal37">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal37" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Code Geass</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/n6Cdo359LUE" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 28 - Pokémon -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/pokemon.jpeg" class="card-img-top" alt="Pokémon">
+    <div class="card-body">
+      <h5 class="card-title">Pokémon</h5>
+      <p><strong>Gênero:</strong> Aventura / Fantasia / Infantil</p>
+      <p>Acompanhe Ash e Pikachu em uma jornada para se tornar um Mestre Pokémon.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal38">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal38" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Pokémon</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/-PlAg8R9TG4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 29 - Black Clover -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/blackclover.jpg" class="card-img-top" alt="Black Clover">
+    <div class="card-body">
+      <h5 class="card-title">Black Clover</h5>
+      <p><strong>Gênero:</strong> Ação / Magia / Fantasia</p>
+      <p>Asta, um jovem sem magia, luta para se tornar o Rei Mago de seu reino.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal39">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal39" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Black Clover</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/xaXpL3k-qbU" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 30 - Hunter × Hunter -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/hunter.jpg" class="card-img-top" alt="Hunter × Hunter">
+    <div class="card-body">
+      <h5 class="card-title">Hunter × Hunter</h5>
+      <p><strong>Gênero:</strong> Aventura / Ação / Shounen</p>
+      <p>Gon embarca em uma jornada para se tornar um Hunter e encontrar seu pai desaparecido.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal40">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal40" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Hunter × Hunter</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/d6kBeJjTGnY" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 31 - Cyberpunk: Edgerunners -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/cyber.jpg" class="card-img-top" alt="Cyberpunk: Edgerunners">
+    <div class="card-body">
+      <h5 class="card-title">Cyberpunk: Edgerunners</h5>
+      <p><strong>Gênero:</strong> Sci-Fi / Ação / Drama</p>
+      <p>Um garoto de rua tenta sobreviver em um mundo futurista dominado pela tecnologia e crime.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal41">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal41" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Cyberpunk: Edgerunners</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/25XGPHY1TMM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 32 - Boruto: Naruto Next Generations -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/boruto.jpg" class="card-img-top" alt="Boruto">
+    <div class="card-body">
+      <h5 class="card-title">Boruto: Naruto Next Generations</h5>
+      <p><strong>Gênero:</strong> Ação / Aventura / Shounen</p>
+      <p>Filho de Naruto, Boruto luta para trilhar seu próprio caminho como ninja.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal42">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal42" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Boruto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dyARLBWZDys" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/neon.jpg" class="card-img-top" alt="Neon Genesis Evangelion">
+    <div class="card-body">
+      <h5 class="card-title">Neon Genesis Evangelion</h5>
+      <p><strong>Gênero:</strong> Mecha / Psicológico</p>
+      <p>Adolescentes pilotam robôs gigantes para combater seres misteriosos e salvar a humanidade.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal26">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal26" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Neon Genesis Evangelion</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/zEnsYn43TpA" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/tengen.jpg" class="card-img-top" alt="Tengen Toppa Gurren Lagann">
+    <div class="card-body">
+      <h5 class="card-title">Tengen Toppa Gurren Lagann</h5>
+      <p><strong>Gênero:</strong> Ação / Mecha</p>
+      <p>Dois jovens lutam para libertar a humanidade em um mundo subterrâneo usando robôs gigantes.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal27">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal27" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Gurren Lagann</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/dmTxkCDX6vs" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/steins.jpg" class="card-img-top" alt="Steins;Gate">
+    <div class="card-body">
+      <h5 class="card-title">Steins;Gate</h5>
+      <p><strong>Gênero:</strong> Ficção Científica / Suspense</p>
+      <p>Um grupo de amigos descobre como enviar mensagens ao passado, alterando o futuro de forma perigosa.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal28">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modal28" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Steins;Gate</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/D-2vKu_Bdgw" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/baccano.jpg" class="card-img-top" alt="Baccano!">
+            <div class="card-body">
+              <h5 class="card-title">Baccano!</h5>
+              <p><strong>Gênero:</strong> Ação / Mistério</p>
+              <p>Uma história caótica com alquimistas imortais, mafiosos e ladrões durante a era da Lei Seca nos EUA.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal29">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal29" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Baccano!</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/7OXmI9F3IEY" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anime 30 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/mushishi.jpg" class="card-img-top" alt="Mushishi">
+            <div class="card-body">
+              <h5 class="card-title">Mushishi</h5>
+              <p><strong>Gênero:</strong> Fantasia / Mistério</p>
+              <p>Segue Ginko, um "Mushi-shi" que investiga formas de vida etéreas chamadas mushi e seus efeitos sobre os humanos.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal30">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal30" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Mushishi</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/MCfARhvKE3A" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anime 31 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/berserk.jpg" class="card-img-top" alt="Berserk">
+            <div class="card-body">
+              <h5 class="card-title">Berserk</h5>
+              <p><strong>Gênero:</strong> Ação / Fantasia Sombria</p>
+              <p>A jornada de Guts, um guerreiro marcado pela tragédia, em busca de vingança contra forças demoníacas.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal31">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal31" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Berserk</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/J7fxGPgwAdQ" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anime 32 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/spy.jpg" class="card-img-top" alt="Spy x Family">
+            <div class="card-body">
+              <h5 class="card-title">Spy x Family</h5>
+              <p><strong>Gênero:</strong> Ação / Comédia</p>
+              <p>Um espião deve formar uma família falsa para cumprir uma missão, mas cada membro guarda um segredo.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal32">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal32" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Spy x Family</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/0CJr6AfE2rY" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anime 33 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/ranking.jpeg" class="card-img-top" alt="Ranking of Kings">
+            <div class="card-body">
+              <h5 class="card-title">Ranking of Kings</h5>
+              <p><strong>Gênero:</strong> Aventura / Fantasia</p>
+              <p>Bojji, um príncipe surdo e frágil, desafia todas as expectativas em sua busca por se tornar um grande rei.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal33">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal33" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - Ranking of Kings</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/4IRzluxhQck" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anime 34 -->
+        <div class="col-md-6">
+          <div class="card text-center">
+            <img src="img/rwby.jpg" class="card-img-top" alt="RWBY">
+            <div class="card-body">
+              <h5 class="card-title">RWBY</h5>
+              <p><strong>Gênero:</strong> Ação / Fantasia</p>
+              <p>Caçadoras em treinamento lutam contra criaturas sombrias em um mundo onde a magia e tecnologia coexistem.</p>
+              <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modal34">🎥 Assistir Trailer</button>
+              <button class="btn btn-success">🎬 Assistir Anime - R$ 9,90</button>
+            </div>
+          </div>
+          <div class="modal fade" id="modal34" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content bg-dark">
+                <div class="modal-header border-0">
+                  <h5 class="modal-title text-white">Trailer - RWBY</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                  <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/DcxNv_JU4QI" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      
+  
+
+<!-- Anime 1 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/attack.jpg" class="card-img-top" alt="Attack on Titan">
+    <div class="card-body">
+      <h5 class="card-title">Attack on Titan</h5>
+      <p><strong>Gênero:</strong> Ação / Fantasia</p>
+      <p>Humanidade luta pela sobrevivência contra titãs devoradores de homens.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalAOT">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalAOT" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Attack on Titan</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/MGRm4IzK1SQ" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 2 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/dbz.jpg" class="card-img-top" alt="Dragon Ball Z">
+    <div class="card-body">
+      <h5 class="card-title">Dragon Ball Z</h5>
+      <p><strong>Gênero:</strong> Ação / Aventura</p>
+      <p>Goku e seus amigos defendem a Terra de inimigos poderosos.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalDBZ">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalDBZ" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Dragon Ball Z</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/QtFK80loc0Y" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 3 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/naruto.jpg" class="card-img-top" alt="Naruto">
+    <div class="card-body">
+      <h5 class="card-title">Naruto</h5>
+      <p><strong>Gênero:</strong> Ação / Ninja</p>
+      <p>Um jovem ninja luta para se tornar Hokage e ganhar o respeito da vila.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalNaruto">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalNaruto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Naruto</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/-G9BqkgZXRA" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 4 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/onepiece.jpg" class="card-img-top" alt="One Piece">
+    <div class="card-body">
+      <h5 class="card-title">One Piece</h5>
+      <p><strong>Gênero:</strong> Aventura / Ação</p>
+      <p>Luffy e sua tripulação navegam em busca do tesouro One Piece.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalOP">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalOP" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - One Piece</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/S8_YwFLCh4U" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 5 -->
+<div class="col-md-6">
+  <div class="card text-center">
+    <img src="img/demon.jpg" class="card-img-top" alt="Demon Slayer">
+    <div class="card-body">
+      <h5 class="card-title">Demon Slayer</h5>
+      <p><strong>Gênero:</strong> Ação / Fantasia</p>
+      <p>Tanjiro enfrenta demônios para salvar sua irmã e vingar sua família.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalDS">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalDS" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Demon Slayer</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/VQGCKyvzIM4" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 6 -->
+<div class="col-md-6 mb-4">
+  <div class="card text-center">
+    <img src="img/death.jpg" class="card-img-top" alt="Death Note">
+    <div class="card-body">
+      <h5 class="card-title">Death Note</h5>
+      <p><strong>Gênero:</strong> Suspense / Sobrenatural</p>
+      <p>Um estudante encontra um caderno que mata qualquer pessoa cujo nome seja escrito nele.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalDN">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalDN" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Death Note</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/BHUPZpSKkhk" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 7 -->
+<div class="col-md-6 mb-4">
+  <div class="card text-center">
+    <img src="img/fullmetal.jpg" class="card-img-top" alt="Fullmetal Alchemist: Brotherhood">
+    <div class="card-body">
+      <h5 class="card-title">Fullmetal Alchemist: Brotherhood</h5>
+      <p><strong>Gênero:</strong> Aventura / Fantasia</p>
+      <p>Dois irmãos alquimistas buscam a pedra filosofal para recuperar seus corpos.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalFMA">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalFMA" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Fullmetal Alchemist: Brotherhood</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/kx0nBaS_q50" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 8 -->
+<div class="col-md-6 mb-4">
+  <div class="card text-center">
+    <img src="img/jujutsu.jpg" class="card-img-top" alt="Jujutsu Kaisen">
+    <div class="card-body">
+      <h5 class="card-title">Jujutsu Kaisen</h5>
+      <p><strong>Gênero:</strong> Ação / Sobrenatural</p>
+      <p>Estudantes enfrentam maldições e espíritos em batalhas cheias de poder e emoção.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalJK">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalJK" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Jujutsu Kaisen</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/ynr6gnyu9NE" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 9 -->
+<div class="col-md-6 mb-4">
+  <div class="card text-center">
+    <img src="img/tokyoghoul.jpg" class="card-img-top" alt="Tokyo Ghoul">
+    <div class="card-body">
+      <h5 class="card-title">Tokyo Ghoul</h5>
+      <p><strong>Gênero:</strong> Terror / Ação</p>
+      <p>Um jovem se transforma em meio monstro após um encontro com uma ghoul faminta.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalTG">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalTG" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Tokyo Ghoul</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/JzI-m7JZhuM" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Anime 10 -->
+<div class="col-md-6 mb-4">
+  <div class="card text-center">
+    <img src="img/bleach.jpg" class="card-img-top" alt="Bleach">
+    <div class="card-body">
+      <h5 class="card-title">Bleach</h5>
+      <p><strong>Gênero:</strong> Ação / Sobrenatural</p>
+      <p>Ichigo Kurosaki ganha poderes de shinigami e enfrenta espíritos malignos.</p>
+      <button class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#modalBleach">🎥 Assistir Trailer</button>
+      <button class="btn btn-success">📺 Assistir Anime - R$ 9,90</button>
+    </div>
+  </div>
+  <div class="modal fade" id="modalBleach" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title text-white">Trailer - Bleach</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/1sygUhb8Q2Y" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+ <!-- SCRIPT PARA PAUSAR TRAILERS -->
+  <script>
+    function stopTrailer(iframeId) {
+      document.getElementById(iframeId).src = '';
+    }
+  </script>
+
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2025 Entretenimento+. Todos os direitos reservados.</p>
+        <div class="rounded-social-buttons">
+          <a class="social-button facebook" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a class="social-button linkedin" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a class="social-button tiktok" href="https://www.tiktok.com/" target="_blank"><i class="fab fa-tiktok"></i></a>
+          <a class="social-button youtube" href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a class="social-button instagram" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+   
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
+
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
